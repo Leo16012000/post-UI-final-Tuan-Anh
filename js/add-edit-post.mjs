@@ -30,18 +30,15 @@ const validateForm = (values) => {
   const isValidTitle = !!values.title;
   if (!isValidTitle) {
     // TODO: Update DOM to show error message
-    alert("Title is invalid");
     return false;
   }
   // Validate author name: at least 2 words
   const isValidAuthor = values.author.split(" ").filter((x) => !!x).length >= 2;
   if (!isValidAuthor) {
     // TODO: Update DOM to show error message
-    alert("Author is invalid");
     return false;
   }
   if (!values.imageUrl) {
-    alert("There's no image");
     return false;
   }
 
@@ -76,6 +73,7 @@ const handleFormSubmit = async (event) => {
   console.log(postObj);
 
   if (!validateForm(postObj)) {
+    alert("Dữ liệu nhập vào thiếu hoặc không chính xác");
     return;
   }
   // EDIT
