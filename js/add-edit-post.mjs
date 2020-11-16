@@ -30,7 +30,7 @@ const validateForm = (values) => {
   const isValidTitle = !!values.title;
   if (!isValidTitle) {
     // TODO: Update DOM to show error message
-    alert("Age is invalid");
+    alert("Title is invalid");
     return false;
   }
   // Validate author name: at least 2 words
