@@ -24,8 +24,6 @@ function parseUrlString(str) {
   return params;
 }
 const validateForm = (values) => {
-  if (!values) return false;
-
   // Validate title
   const isValidTitle = !!values.title;
   if (!isValidTitle) {
