@@ -37,7 +37,7 @@ const validateForm = (values) => {
   const isValidAuthor = values.author.split(" ").filter((x) => !!x).length >= 2;
   if (!isValidAuthor) {
     // TODO: Update DOM to show error message
-    alert("Name is invalid");
+    alert("Author is invalid");
     return false;
   }
   if (!values.imageUrl) {
