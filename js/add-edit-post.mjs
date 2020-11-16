@@ -30,18 +30,18 @@ const validateForm = (values) => {
   const isValidTitle = !!values.title;
   if (!isValidTitle) {
     // TODO: Update DOM to show error message
-    console.log("Age is invalid");
+    alert("Age is invalid");
     return false;
   }
   // Validate author name: at least 2 words
   const isValidAuthor = values.author.split(" ").filter((x) => !!x).length >= 2;
   if (!isValidAuthor) {
     // TODO: Update DOM to show error message
-    console.log("Name is invalid");
+    alert("Name is invalid");
     return false;
   }
   if (!values.imageUrl) {
-    console.log("image is invalid");
+    alert("There's no image");
     return false;
   }
 
